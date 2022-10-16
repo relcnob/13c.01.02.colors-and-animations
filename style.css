@@ -1,0 +1,471 @@
+:root {
+  /* 1 lighter than 2 */
+  --colorPrimary_1: #27302d;
+  --colorPrimary_2: #1f2220;
+  --colorSecondary_0: #f1f7f7;
+  --colorSecondary_1: #e0e7e7;
+  --colorSecondary_2: #b8c5c5;
+  --colorAccent_1: #faa13c;
+  --colorAccent_2: #eb7617;
+}
+
+/* Resetter */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+/* Fonts */
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2em;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--colorPrimary_1);
+  font-family: "Noto Serif Display", serif;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  color: var(--colorAccent_1);
+  font-size: 3.052rem;
+  line-height: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.953rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  color: var(--colorPrimary_1);
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+a:before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: var(--colorAccent_2);
+  left: 0;
+  bottom: -2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.5s cubic-bezier(0.61, 0.01, 0.23, 1);
+}
+
+a:hover:before {
+  height: 3px;
+  transform: scaleX(1);
+}
+
+/* UI Elements */
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--colorAccent_2);
+  color: var(--colorSecondary_1);
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s ease;
+}
+
+button:hover {
+  background-color: var(--colorAccent_1);
+}
+
+button:before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 3px;
+  left: 0;
+  bottom: -2px;
+  background-color: var(--colorPrimary_1);
+  box-sizing: border-box;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.5s cubic-bezier(0.61, 0.01, 0.23, 1);
+}
+
+button:hover:before {
+  transform: scaleX(1);
+}
+
+.dark_button {
+  background-color: var(--colorPrimary_2);
+}
+
+.dark_button:hover {
+  background-color: var(--colorAccent_2);
+}
+
+.dark_button:before {
+  background-color: var(--colorSecondary_2);
+}
+
+#request_input {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  position: relative;
+  gap: 1rem;
+}
+
+#request_input label {
+  position: absolute;
+  width: 350px;
+  left: 0;
+  pointer-events: none;
+}
+
+input[type="text"] {
+  left: 0;
+  box-sizing: border-box;
+  width: 350px;
+  height: 1.7rem;
+  padding: 1.5rem 1rem;
+  font-size: 1rem;
+  text-align: left;
+  background-color: var(--colorSecondary_1);
+  border-color: var(--colorSecondary_1);
+  color: var(--colorPrimary_2);
+  background: none;
+  border: none;
+  border-bottom: solid 2px var(--colorPrimary_1);
+  padding: 0;
+  transition: 0.5s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--colorAccent_2);
+}
+
+/* Menu */
+nav {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--colorPrimary_2);
+}
+
+nav a {
+  color: var(--colorAccent_1);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav a.logo {
+  font-family: "Noto Serif Display", serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0px 1rem;
+}
+
+/* Header */
+header {
+  display: flex;
+  min-height: 80vh;
+  padding: 5rem;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--colorPrimary_1);
+}
+
+header p {
+  color: var(--colorSecondary_2);
+}
+
+header button {
+  margin-bottom: 3rem;
+}
+
+nav button:before {
+  background-color: var(--colorSecondary_2);
+}
+
+.header_text {
+  width: 30vw;
+  min-width: 300px;
+}
+
+.header_graphics {
+  width: 25vw;
+  height: 25vw;
+  min-width: 250px;
+  min-height: 250px;
+  border-radius: 1200px;
+  background-color: var(--colorPrimary_2);
+  margin-bottom: 1rem;
+  padding: 3rem;
+}
+.header_graphics object {
+  width: 100%;
+  height: 100%;
+}
+
+.header_graphics object svg path {
+  fill: #f00;
+}
+
+/* product section */
+#product {
+  padding: 5rem 3rem;
+  background-color: var(--colorSecondary_1);
+}
+
+#product h2 {
+  font-size: 3.052rem;
+  line-height: 3.5rem;
+}
+
+#product article {
+  display: flex;
+  min-height: 50vh;
+  padding: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#product article:first-child {
+  min-height: 40vh;
+}
+
+.product_text {
+  width: 50vw;
+  min-width: 300px;
+}
+
+#product article:first-child .product_text {
+  width: 75vw;
+  min-width: 300px;
+}
+
+.product_graphics {
+  width: 15vw;
+  height: 15vw;
+  min-width: 150px;
+  min-height: 150px;
+  padding: 1rem;
+  margin: 3rem;
+  background-color: var(--colorAccent_1);
+  border-radius: 300px;
+}
+.product_graphics object {
+  width: 100%;
+  height: 100%;
+}
+
+/* highlight sections */
+.highlight {
+  display: flex;
+  min-height: 70vh;
+  padding: 2rem;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--colorAccent_1);
+}
+
+.highlight div {
+  width: 80vw;
+}
+
+.highlight div h2 {
+  font-size: 5.005rem;
+  line-height: 6rem;
+}
+
+.highlight a:before {
+  background-color: var(--colorPrimary_1);
+}
+
+.dark {
+  background-color: #222;
+}
+
+.dark h2 {
+  color: #eee;
+}
+
+.dark a {
+  color: #ccc;
+  cursor: pointer;
+}
+
+/* request section */
+#request {
+  display: flex;
+  min-height: 50vh;
+  padding: 2rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--colorSecondary_2);
+}
+
+#request div {
+  width: 50vw;
+  min-width: 300px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  padding: 5vh 2rem;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--colorPrimary_2);
+  color: #ddd;
+}
+
+footer h2,
+footer h3 {
+  color: var(--colorSecondary_1);
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: var(--colorSecondary_2);
+  cursor: pointer;
+}
+
+footer section.left {
+  display: flex;
+  max-width: 50vw;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer section div {
+  margin: 0px 1rem 1rem 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 0.9em;
+  }
+
+  #product h2 {
+    font-size: 1.953rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+  }
+  .highlight div h2 {
+    font-size: 3.052rem;
+    line-height: 3.5rem;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --colorPrimary_1: #27302d;
+    --colorPrimary_2: #1f2220;
+    --colorSecondary_0: #f1f7f7;
+    --colorSecondary_1: #e0e7e7;
+    --colorSecondary_2: #b8c5c5;
+    --colorAccent_1: #faa13c;
+    --colorAccent_2: #eb7617;
+  }
+  #product {
+    background-color: var(--colorPrimary_1);
+  }
+  #product h2 {
+    color: var(--colorSecondary_1);
+  }
+  .product_text h3 {
+    color: var(--colorSecondary_1);
+  }
+  .product_text p {
+    color: var(--colorSecondary_2);
+  }
+  .product_text a {
+    color: var(--colorAccent_1);
+  }
+  .product_graphics {
+    background-color: var(--colorAccent_2);
+  }
+  .product_graphics object {
+    filter: invert(1);
+  }
+  #request {
+    background-color: var(--colorAccent_2);
+  }
+  #request div h2 {
+    color: var(--colorPrimary_2);
+  }
+  #request div p {
+    color: var(--colorPrimary_1);
+  }
+  input[type="text"] {
+    color: var(--colorPrimary_1);
+    border-color: var(--colorSecondary_2);
+  }
+  input[type="text"]:focus {
+    border-color: var(--colorPrimary_2);
+  }
+  input[type="text"]::placeholder {
+    color: var(--colorPrimary_2);
+    opacity: 0.6;
+  }
+
+  #request button {
+    background-color: var(--colorPrimary_2);
+  }
+
+  #request button:hover {
+    background-color: var(--colorPrimary_1);
+  }
+
+  #request button:before {
+    background-color: var(--colorSecondary_2);
+  }
+
+  .highlight {
+    background-color: var(--colorAccent_2);
+  }
+  h1 {
+    color: var(--colorAccent_2);
+  }
+}
